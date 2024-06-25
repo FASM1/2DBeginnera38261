@@ -7,12 +7,12 @@ using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
     public InputAction MoveAction;
-
+    Rigidbody2D rigidbody2d;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        rigidbody2d = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -46,6 +46,7 @@ public class PlayerController : MonoBehaviour
         position.x = position.x + 0.1f * horizontal;
         position.y = position.y + 0.1f * vertical;
         transform.position = position;
+
     }
 
 }
